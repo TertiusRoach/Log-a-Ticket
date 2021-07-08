@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--|▼| Vendors |▼|-->
+    <!--► Remove Console Error,  /favicon.ico ▼-->
+    <link rel="shortcut icon" href="../content/project-logo.svg" />
+
+    <!--► Google Fonts (Baloo Bhai 2) ▼-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!--► jQuery (JavaScript) ▼-->
+    <script defer src="../libs/jquery/3.6.0/slim-build-3.6.0.min.js"></script>
+
+    <!--► Font Awesome Pro (Library) ▼-->
+    <link href="../libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
+    <!--|▲| Vendors |▲|-->
+
+    <!--|▼| Resources |▼|-->
+    <!--► Index Body (CSS) ▼-->
+    <link rel="stylesheet" type="text/css" href="../css/index-body.css" />
+    <!--► Index Header (CSS) ▼-->
+    <link rel="stylesheet" type="text/css" href="../css/index-header.css" />
+    <!--► Index iFrame (CSS) ▼-->
+    <link rel="stylesheet" type="text/css" href="../css/index-iframe.css" />
+    <!--► Index Main (CSS) ▼-->
+    <link rel="stylesheet" type="text/css" href="../css/index-main.css" />
+    <!--► Index Overlay (CSS) ▼-->
+    <link rel="stylesheet" type="text/css" href="../css/index-overlay.css" />
+
+    <!--► Index (JavaScript) ▼-->
+    <script defer src="../index.js"></script>
+    <!--|▲| Resources |▲|-->
+
+    <title>Log a Ticket</title>
+  </head>
+  <body id="index-body" style="display: grid">
+    <!--▲ Default: style="display: grid" ▲-->
+
+    <header id="index-header" class="" style="display: grid">
+      <!--▲ Default: style="display: none" ▲-->
+      <!--► style="display: grid" ◄-->
+      <!--▲ Default: style="display: none" ▲-->
+      <!--► style="display: grid" ◄-->
+      <button class="ticket-button">
+        <!--► class="default-button" ◄-->
+        <!--► class="active-button" ◄-->
+        <div class="default-button">
+          <i class="fad fa-ticket-alt fa-2x"></i>
+          <h3>Log a Ticket</h3>
+        </div>
+      </button>
+      <button class="logged-button">
+        <!--► class="default-button" ◄-->
+        <!--► class="active-button" ◄-->
+        <div class="default-button">
+          <i class="fad fa-people-arrows fa-2x"></i>
+          <h3>Logged Tickets</h3>
+        </div>
+      </button>
+      <button class="manage-button">
+        <!--► class="default-button" ◄-->
+        <!--► class="active-button" ◄-->
+        <div class="default-button">
+          <i class="fad fa-tasks fa-2x"></i>
+          <h3>Manage Tickets</h3>
+        </div>
+      </button>
+
+      <h4>Viewing as:</h4>
+      <form class="employee-form">
+        <i class="fas fa-caret-down fa-2x"></i>
+        <select class="employee-select">
+          <!--► <option value="pick-employee" selected>Pick Employee</option> ◄-->
+
+          <option value="jane-lester">Jane Lester</option>
+          <option value="hammad-dean">Hammad Dean</option>
+          <option value="saffron-hansen">Saffron Hansen</option>
+          <option value="dale-sutton">Dale Sutton</option>
+          <option value="eshan-booker">Eshan Booker</option>
+          <option value="theodore-russell">Theodore Russell</option>
+          <option value="kady-deacon">Kady Deacon</option>
+          <option value="tasneem-kemp">Tasneem Kemp</option>
+          <option value="conrad-guy">Conrad Guy</option>
+          <option value="danish-copeland">Danish Copeland</option>
+        </select>
+      </form>
+    </header>
+
+    <div id="index-iframe" class="iframe-canvas" style="display: flex">
+      <!--▲ Default: style="display: none" ▲-->
+      <!--► style="display: flex" ◄-->
+      <iframe width="150%" src="tickets.html"></iframe>
+    </div>
+
+    <main id="index-main" class="" style="display: none">
+      <!--▲ Default: style="display: none" ▲-->
+      <!--► style="display: grid" ◄-->
+    </main>
+
+    <section id="index-overlay" class="login-overlay" style="display: none">
+      <!--▲ Default: style="display: grid" ▲-->
+      <!--► class="login-overlay" ◄-->
+    </section>
+  </body>
+</html>

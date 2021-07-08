@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--|▼| Vendors |▼|-->
+    <!--► Remove Console Error,  /favicon.ico ▼-->
+    <link rel="shortcut icon" href="../content/project-logo.svg" />
+
+    <!--► Google Fonts (Baloo Bhai 2) ▼-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!--► jQuery (JavaScript) ▼-->
+    <script defer src="../libs/jquery/3.6.0/slim-build-3.6.0.min.js"></script>
+
+    <!--► Font Awesome Pro (Library) ▼-->
+    <link href="../libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
+    <!--|▲| Vendors |▲|-->
+
+    <!--|▼| Resources |▼|-->
+    <!--► Tickets Body (CSS) ▼-->
+    <link rel="stylesheet" type="text/css" href="../css/tickets-body.css" />
+    <!--► Tickets Header (CSS) ▼-->
+    <link rel="stylesheet" type="text/css" href="../css/tickets-header.css" />
+    <!--► Tickets Main (CSS) ▼-->
+    <link rel="stylesheet" type="text/css" href="../css/tickets-main.css" />
+
+    <!--► Index (JavaScript) ▼-->
+    <script defer src="../index.js"></script>
+    <!--|▲| Resources |▲|-->
+
+    <title>Tickets</title>
+  </head>
+  <body id="tickets-body">
+    <!--► class="logged-main" ◄-->
+    <!--► class="manage-main" ◄-->
+    <header id="tickets-header">
+      <button class="date-button">
+        <!--► class="ascending-order" ◄-->
+        <!--► class="descending-order" ◄-->
+        <div class="ascending-order">
+          <i class="fad fa-sort-numeric-down"></i>
+          <i class="fad fa-sort-numeric-down-alt"></i>
+          <h3>Date</h3>
+        </div>
+      </button>
+      <button class="subject-button">
+        <h3>Subject</h3>
+      </button>
+      <button class="recipient-button">
+        <div class="ascending-order">
+          <i class="fad fa-sort-alpha-down"><!--► class="ascending-order" ◄--></i>
+          <i class="fad fa-sort-alpha-down-alt"><!--► class="descending-order" ◄--></i>
+          <!--► <h3>Sender</h3> ◄-->
+          <!--► <h3>Receiver</h3> ◄-->
+          <h3>Sender</h3>
+          <h3>Receiver</h3>
+        </div>
+      </button>
+    </header>
+
+    <!--► class="tab-pending" ◄-->
+    <!--► class="tab-assigned" ◄-->
+    <!--► class="tab-resolved" ◄-->
+    <!--► class="tab-deleted" ◄-->
+    <!--► class="tab-everything" ◄-->
+
+    <!--► class="logged-main" ◄-->
+    <!--► class="manage-main" ◄-->
+    <main id="tickets-main" class="tab-everything" style="display: grid">
+      <!--▲ style="display: grid" ▲-->
+      <!--► class="pending" ◄-->
+      <!--► class="assinged" ◄-->
+      <!--► class="resolved" ◄-->
+      <!--► class="deleted" ◄-->
+      <article style="display: grid" class="ticket pending">
+        <p style="display: flex" class="shortdate-text">${shortDate}</p>
+        <p style="display: flex" class="subject-text">${subjectText}</p>
+        <div class="recipient-container">
+          <p class="sender-text">${senderName}</p>
+          <p class="receiver-text">${receiverName}</p>
+        </div>
+        <div class="reference-container">
+          <p class="longdate-text">${longDate}</p>
+          <p class="description-text">${descriptionText}</p>
+          <p class="assigned-date">${assignedDate}</p>
+          <p class="resolved-date">${resolvedDate}</p>
+          <p class="deleted-date">${deletedDate}</p>
+          <p class="deleted-note">${deletedNote}</p>
+        </div>
+      </article>
+      <article style="display: grid" class="ticket assigned">
+        <p style="display: flex" class="shortdate-text">${shortDate}</p>
+        <p style="display: flex" class="subject-text">${subjectText}</p>
+        <div class="recipient-container">
+          <p class="sender-text">${senderName}</p>
+          <p class="receiver-text">${receiverName}</p>
+        </div>
+        <div class="reference-container">
+          <p class="longdate-text">${longDate}</p>
+          <p class="description-text">${descriptionText}</p>
+          <p class="assigned-date">${assignedDate}</p>
+          <p class="resolved-date">${resolvedDate}</p>
+          <p class="deleted-date">${deletedDate}</p>
+          <p class="deleted-note">${deletedNote}</p>
+        </div>
+      </article>
+      <article style="display: grid" class="ticket resolved">
+        <p style="display: flex" class="shortdate-text">${shortDate}</p>
+        <p style="display: flex" class="subject-text">${subjectText}</p>
+        <div class="recipient-container">
+          <p class="sender-text">${senderName}</p>
+          <p class="receiver-text">${receiverName}</p>
+        </div>
+        <div class="reference-container">
+          <p class="longdate-text">${longDate}</p>
+          <p class="description-text">${descriptionText}</p>
+          <p class="assigned-date">${assignedDate}</p>
+          <p class="resolved-date">${resolvedDate}</p>
+          <p class="deleted-date">${deletedDate}</p>
+          <p class="deleted-note">${deletedNote}</p>
+        </div>
+      </article>
+      <article style="display: grid" class="ticket deleted">
+        <p style="display: flex" class="shortdate-text">${shortDate}</p>
+        <p style="display: flex" class="subject-text">${subjectText}</p>
+        <div class="recipient-container">
+          <p class="sender-text">${senderName}</p>
+          <p class="receiver-text">${receiverName}</p>
+        </div>
+        <div class="reference-container">
+          <p class="longdate-text">${longDate}</p>
+          <p class="description-text">${descriptionText}</p>
+          <p class="assigned-date">${assignedDate}</p>
+          <p class="resolved-date">${resolvedDate}</p>
+          <p class="deleted-date">${deletedDate}</p>
+          <p class="deleted-note">${deletedNote}</p>
+        </div>
+      </article>
+      <article style="display: grid" class="ticket pending">
+        <p style="display: flex" class="shortdate-text">${shortDate}</p>
+        <p style="display: flex" class="subject-text">${subjectText}</p>
+        <div class="recipient-container">
+          <p class="sender-text">${senderName}</p>
+          <p class="receiver-text">${receiverName}</p>
+        </div>
+        <div class="reference-container">
+          <p class="longdate-text">${longDate}</p>
+          <p class="description-text">${descriptionText}</p>
+          <p class="assigned-date">${assignedDate}</p>
+          <p class="resolved-date">${resolvedDate}</p>
+          <p class="deleted-date">${deletedDate}</p>
+          <p class="deleted-note">${deletedNote}</p>
+        </div>
+      </article>
+      <article style="display: grid" class="ticket assigned">
+        <p style="display: flex" class="shortdate-text">${shortDate}</p>
+        <p style="display: flex" class="subject-text">${subjectText}</p>
+        <div class="recipient-container">
+          <p class="sender-text">${senderName}</p>
+          <p class="receiver-text">${receiverName}</p>
+        </div>
+        <div class="reference-container">
+          <p class="longdate-text">${longDate}</p>
+          <p class="description-text">${descriptionText}</p>
+          <p class="assigned-date">${assignedDate}</p>
+          <p class="resolved-date">${resolvedDate}</p>
+          <p class="deleted-date">${deletedDate}</p>
+          <p class="deleted-note">${deletedNote}</p>
+        </div>
+      </article>
+      <article style="display: grid" class="ticket resolved">
+        <p style="display: flex" class="shortdate-text">${shortDate}</p>
+        <p style="display: flex" class="subject-text">${subjectText}</p>
+        <div class="recipient-container">
+          <p class="sender-text">${senderName}</p>
+          <p class="receiver-text">${receiverName}</p>
+        </div>
+        <div class="reference-container">
+          <p class="longdate-text">${longDate}</p>
+          <p class="description-text">${descriptionText}</p>
+          <p class="assigned-date">${assignedDate}</p>
+          <p class="resolved-date">${resolvedDate}</p>
+          <p class="deleted-date">${deletedDate}</p>
+          <p class="deleted-note">${deletedNote}</p>
+        </div>
+      </article>
+      <article style="display: grid" class="ticket deleted">
+        <p style="display: flex" class="shortdate-text">${shortDate}</p>
+        <p style="display: flex" class="subject-text">${subjectText}</p>
+        <div class="recipient-container">
+          <p class="sender-text">${senderName}</p>
+          <p class="receiver-text">${receiverName}</p>
+        </div>
+        <div class="reference-container">
+          <p class="longdate-text">${longDate}</p>
+          <p class="description-text">${descriptionText}</p>
+          <p class="assigned-date">${assignedDate}</p>
+          <p class="resolved-date">${resolvedDate}</p>
+          <p class="deleted-date">${deletedDate}</p>
+          <p class="deleted-note">${deletedNote}</p>
+        </div>
+      </article>
+
+      <!--► class="ticket pending" ◄-->
+      <!--► class="ticket assigned" ◄-->
+      <!--► class="ticket resolved" ◄-->
+      <!--► class="ticket deleted" ◄-->
+      <!--▼
+      <article style="display: grid" class="ticket pending">
+        <p style="display: flex" class="shortdate-text">${shortDate}</p>
+        <p style="display: flex" class="subject-text">${subjectText}</p>
+        <div class="recipient-container">
+          <p class="sender-text">${senderName}</p>
+          <p class="receiver-text">${receiverName}</p>
+        </div>
+        <div class="reference-container">
+          <p class="longdate-text">${longDate}</p>
+          <p class="description-text">${descriptionText}</p>
+          <p class="assigned-date">${assignedDate}</p>
+          <p class="resolved-date">${resolvedDate}</p>
+          <p class="deleted-date">${deletedDate}</p>
+          <p class="deleted-note">${deletedNote}</p>
+        </div>
+      </article>
+
+      <article style="display: grid" class="ticket assigned">
+        <p style="display: flex" class="shortdate-text">${shortDate}</p>
+        <p style="display: flex" class="subject-text">${subjectText}</p>
+        <div class="recipient-container">
+          <p class="sender-text">${senderName}</p>
+          <p class="receiver-text">${receiverName}</p>
+        </div>
+        <div class="reference-container">
+          <p class="longdate-text">${longDate}</p>
+          <p class="description-text">${descriptionText}</p>
+          <p class="assigned-date">${assignedDate}</p>
+          <p class="resolved-date">${resolvedDate}</p>
+          <p class="deleted-date">${deletedDate}</p>
+          <p class="deleted-note">${deletedNote}</p>
+        </div>
+      </article>
+
+      <article style="display: grid" class="ticket resolved">
+        <p style="display: flex" class="shortdate-text">${shortDate}</p>
+        <p style="display: flex" class="subject-text">${subjectText}</p>
+        <div class="recipient-container">
+          <p class="sender-text">${senderName}</p>
+          <p class="receiver-text">${receiverName}</p>
+        </div>
+        <div class="reference-container">
+          <p class="longdate-text">${longDate}</p>
+          <p class="description-text">${descriptionText}</p>
+          <p class="assigned-date">${assignedDate}</p>
+          <p class="resolved-date">${resolvedDate}</p>
+          <p class="deleted-date">${deletedDate}</p>
+          <p class="deleted-note">${deletedNote}</p>
+        </div>
+      </article>
+
+      <article style="display: grid" class="ticket deleted">
+        <p style="display: flex" class="shortdate-text">${shortDate}</p>
+        <p style="display: flex" class="subject-text">${subjectText}</p>
+        <div class="recipient-container">
+          <p class="sender-text">${senderName}</p>
+          <p class="receiver-text">${receiverName}</p>
+        </div>
+        <div class="reference-container">
+          <p class="longdate-text">${longDate}</p>
+          <p class="description-text">${descriptionText}</p>
+          <p class="assigned-date">${assignedDate}</p>
+          <p class="resolved-date">${resolvedDate}</p>
+          <p class="deleted-date">${deletedDate}</p>
+          <p class="deleted-note">${deletedNote}</p>
+        </div>
+      </article>
+      ▲-->
+    </main>
+  </body>
+</html>
