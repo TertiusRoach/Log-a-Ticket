@@ -1,0 +1,1 @@
+{"version":3,"sources":["tools/dist-pages.ts"],"names":[],"mappings":";;;;IAAA,IAAiB,SAAS,CAkBzB;IAlBD,WAAiB,SAAS;QACxB,SAAgB,OAAO,CAAC,QAAgB;YACtC,QAAQ,QAAQ,EAAE;gBAChB,KAAK,YAAY;oBAMf,MAAM;gBAER,KAAK,cAAc;oBAIjB,MAAM;aACT;QACH,CAAC;QAhBe,iBAAO,UAgBtB,CAAA;IACH,CAAC,EAlBgB,SAAS,GAAT,iBAAS,KAAT,iBAAS,QAkBzB","file":"dist-pages.js","sourceRoot":"../../src"}
