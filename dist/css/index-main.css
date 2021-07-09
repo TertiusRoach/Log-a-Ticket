@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/*--|►| Colors |◄|--*/
+/*--|►| #index-main <Main> |◄|--*/
+#index-main {
+  grid-column: 1/13;
+  grid-row: 2/23;
+  display: inherit;
+  grid-template-columns: 80px 1fr 1rem 1fr 1rem 1fr 1rem 1fr 80px;
+  grid-template-rows: repeat(19, 1fr) 40px;
+}
+
+/*--▼ logged-main ▼--*/
+/*--▼ manage-main ▼--*/
+/*--▼ employee-main ▼--*/
+/*--▼ coworker-main ▼--*/

@@ -1,0 +1,66 @@
+@charset "UTF-8";
+/*--|►| Colors |◄|--*/
+/*--|►| #index-header <Header> |◄|--*/
+#index-header {
+  grid-column: 1/13;
+  grid-row: 1/2;
+  z-index: 1;
+  display: inherit;
+  grid-template-columns: 80px repeat(10, 1fr) 80px;
+  grid-template-rows: 40px;
+  background-color: #909cc2;
+}
+#index-header .ticket-button {
+  grid-column: 2/4;
+}
+#index-header .logged-button {
+  grid-column: 4/6;
+}
+#index-header .manage-button {
+  grid-column: 6/8;
+}
+#index-header .default-button {
+  color: #084887;
+}
+#index-header .default-button:hover {
+  cursor: pointer;
+  color: #f8af58;
+}
+#index-header .active-button :is(i, h3) {
+  cursor: default;
+  color: #f8af58;
+}
+#index-header h4 {
+  grid-column: 8/10;
+}
+#index-header .employee-form {
+  grid-column: 10/12;
+}
+#index-header form {
+  margin: 4px 1rem 4px 8px;
+}
+@media only screen and (max-width: 1920px) {
+  #index-header form i {
+    margin-left: 14%;
+  }
+}
+@media only screen and (max-width: 1366px) {
+  #index-header form i {
+    margin-left: 12%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  #index-header form i {
+    margin-left: 10%;
+  }
+}
+#index-header button {
+  justify-content: flex-start;
+}
+#index-header h4 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: default;
+  color: #084887;
+}

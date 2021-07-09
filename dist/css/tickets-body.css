@@ -1,0 +1,32 @@
+@charset "UTF-8";
+/*--|►| Colors |◄|--*/
+/*--|►| #tickets-body <Body> |◄|--*/
+* {
+  font-family: "Baloo Bhai 2", cursive;
+  padding: 0;
+  margin: 0;
+}
+
+#tickets-body {
+  background: #084887;
+  border-right: solid 4px #084887;
+  border-left: solid 4px #084887;
+  /*--▼ logged-main ▼--*/
+  /*--▼ manage-main ▼--*/
+}
+#tickets-body button {
+  display: flex;
+  background: none;
+  border: none;
+  color: #084887;
+}
+#tickets-body button div {
+  display: inline-flex;
+  align-items: center;
+}
+#tickets-body button h3 {
+  padding-left: 8px;
+}
+#tickets-body p {
+  color: #084887;
+}

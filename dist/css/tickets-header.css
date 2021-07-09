@@ -1,0 +1,52 @@
+@charset "UTF-8";
+/*--|►| Colors |◄|--*/
+/*--|►| #tickets-header <Header> |◄|--*/
+#tickets-header {
+  display: grid;
+  grid-template-columns: 0 repeat(10, 1fr) 80px;
+  border-bottom: solid 2px #084887;
+  /*--▼ ascending-order ▼--*/
+  /*--▼ descending-order ▼--*/
+}
+#tickets-header [class*=date-] {
+  grid-column: 1/3;
+}
+#tickets-header [class*=subject-] {
+  grid-column: 3/10;
+}
+#tickets-header [class*=recipient-] {
+  grid-column: 10/13;
+}
+#tickets-header [class*=date-],
+#tickets-header [class*=subject-],
+#tickets-header [class*=recipient-] {
+  display: flex;
+  width: 100%;
+  background: #909cc2;
+}
+#tickets-header .date-button {
+  justify-content: center;
+}
+#tickets-header .date-button div:hover {
+  cursor: pointer;
+  color: #f8af58;
+}
+#tickets-header .subject-button {
+  padding-left: 8px;
+  border-left: solid 2px #084887;
+  border-right: solid 2px #084887;
+}
+#tickets-header .recipient-button {
+  justify-content: flex-start;
+  padding-left: 1rem;
+}
+#tickets-header .recipient-button div:hover {
+  cursor: pointer;
+  color: var(--MediumOrange);
+}
+#tickets-header .ascending-order :is(.fa-sort-numeric-down-alt, .fa-sort-alpha-down-alt) {
+  display: none;
+}
+#tickets-header .descending-order :is(.fa-sort-numeric-down, .fa-sort-alpha-down) {
+  display: none;
+}
