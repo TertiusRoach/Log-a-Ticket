@@ -1,4 +1,4 @@
-Node.js 6.14.6
+## Node.js V6.14.6
 
 Terminal Commands
 
@@ -20,6 +20,8 @@ Terminal Commands
     npm install -g gulp
     npm install jquery
 
+---
+
 VSC Extensions
 
     CSS Grid Snippets,
@@ -32,16 +34,17 @@ VSC Extensions
 
 ---
 
-npm install --save-dev @gulp-sourcemaps/identity-map
-npm install --save-dev @types/jquery
-npm install --save-dev fs
-npm install --save-dev gulp
-npm install --save-dev gulp-npm-dist
-npm install --save-dev gulp-rename
-npm install --save-dev gulp-sass
-npm install --save-dev gulp-sourcemaps
-npm install --save-dev gulp-typescript
-npm install --save-dev sass
-npm install --save-dev typescript
+VSC Exclude (Preference)
 
-npm install jquery
+    .git
+    vscode
+    dist/*.map
+    dist/cfgrequire.js
+    dist/content
+    dist/css
+    dist/tools
+    misc
+    node_modules
+    src/*.d.ts
+    src/tools/*.d.ts
+    types
