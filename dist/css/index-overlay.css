@@ -28,27 +28,6 @@
   /*--► box-shadow: (X-offset) (Y-offset) (Blurriness) (Color) ◄--*/
   box-shadow: 0 0 1rem #084887;
 }
-@media only screen and (max-width: 1920px) {
-  #index-overlay {
-    /*--▼ Login Overlay ▼--*/
-  }
-  #index-overlay form i {
-    margin-left: 16%;
-  }
-}
-@media only screen and (max-width: 1366px) {
-  #index-overlay {
-    /*--▼ Login Overlay ▼--*/
-  }
-  #index-overlay form i {
-    margin-left: 14%;
-  }
-}
-@media only screen and (max-width: 1024px) {
-  #index-overlay form i {
-    margin-left: 26%;
-  }
-}
 
 /*--▼ login-overlay ▼--*/
 .login-overlay {
@@ -75,14 +54,33 @@
   grid-column: 6/8;
   grid-row: 9/11;
 }
-.login-overlay .employee-information {
+.login-overlay .information-text {
+  grid-column: 5/9;
+  grid-row: 12/14;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.login-overlay .employee-information {
-  grid-column: 5/9;
-  grid-row: 12/14;
+@media only screen and (max-width: 1920px) {
+  .login-overlay {
+    /*--▼ Login Overlay ▼--*/
+  }
+  .login-overlay form i {
+    margin-left: 16%;
+  }
+}
+@media only screen and (max-width: 1366px) {
+  .login-overlay {
+    /*--▼ Login Overlay ▼--*/
+  }
+  .login-overlay form i {
+    margin-left: 14%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .login-overlay form i {
+    margin-left: 26%;
+  }
 }
 .login-overlay .login-button {
   grid-column: 6/8;

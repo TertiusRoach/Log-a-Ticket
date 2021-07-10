@@ -4,7 +4,7 @@ define(["require", "exports", "tools/get-elements"], function (require, exports,
     exports.GetPage = void 0;
     var GetPage;
     (function (GetPage) {
-        function fromThe(filename) {
+        function from(filename) {
             var pagename = filename.split('.')[0];
             switch (pagename) {
                 case 'index':
@@ -15,8 +15,8 @@ define(["require", "exports", "tools/get-elements"], function (require, exports,
                     break;
             }
         }
-        GetPage.fromThe = fromThe;
+        GetPage.from = from;
     })(GetPage = exports.GetPage || (exports.GetPage = {}));
 });
 
-//# sourceMappingURL=dist/tools/get-pages.js.map
+//# sourceMappingURL=dist/tools/get-page.js.map
