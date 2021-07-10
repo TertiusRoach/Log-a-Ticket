@@ -12,7 +12,7 @@ require.onError = (err) => {
   debugger;
 };
 require(['jquery', 'start'], function (_jquery, prog) {
-  prog.TicketSystem.start();
+  prog.TicketSystem.startProgram();
 }, function (err) {
   if (console && console.log) {
     console.trace();
