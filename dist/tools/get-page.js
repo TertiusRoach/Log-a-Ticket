@@ -1,21 +1,21 @@
-define(["require", "exports", "tools/get-elements"], function (require, exports, get_elements_1) {
+define(["require", "exports", "tools/build-body"], function (require, exports, build_body_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.GetPage = void 0;
     var GetPage;
     (function (GetPage) {
-        function from(filename) {
-            var pagename = filename.split('.')[0];
-            switch (pagename) {
+        function forHTML(filename) {
+            var page = filename.split('.')[0];
+            switch (page) {
                 case 'index':
-                    get_elements_1.GetElements.fromHTML(pagename);
+                    new build_body_1.BuildBody.forID(page + "-body");
                     break;
                 case 'tickets':
-                    get_elements_1.GetElements.fromHTML(pagename);
+                    new build_body_1.BuildBody.forID(page + "-body");
                     break;
             }
         }
-        GetPage.from = from;
+        GetPage.forHTML = forHTML;
     })(GetPage = exports.GetPage || (exports.GetPage = {}));
 });
 

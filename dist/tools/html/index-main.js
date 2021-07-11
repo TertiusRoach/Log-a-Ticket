@@ -20,4 +20,4 @@ define(["require", "exports"], function (require, exports) {
     })(IndexMain = exports.IndexMain || (exports.IndexMain = {}));
 });
 
-//# sourceMappingURL=dist/tools/containers/index-main.js.map
+//# sourceMappingURL=dist/tools/html/index-main.js.map

@@ -8,4 +8,4 @@ define(["require", "exports"], function (require, exports) {
     })(IndexHeader = exports.IndexHeader || (exports.IndexHeader = {}));
 });
 
-//# sourceMappingURL=dist/tools/containers/index-header.js.map
+//# sourceMappingURL=dist/tools/html/index-header.js.map

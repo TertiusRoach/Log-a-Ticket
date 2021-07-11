@@ -8,4 +8,4 @@ define(["require", "exports"], function (require, exports) {
     })(IndexIframe = exports.IndexIframe || (exports.IndexIframe = {}));
 });
 
-//# sourceMappingURL=dist/tools/containers/index-iframe.js.map
+//# sourceMappingURL=dist/tools/html/index-iframe.js.map
