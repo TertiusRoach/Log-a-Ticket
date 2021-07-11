@@ -16,7 +16,6 @@ Terminal Commands
     npm install --save-dev typescript
     npm install requirejs
     npm i --save requirejs
-
     npm install -g gulp
     npm install jquery
 
