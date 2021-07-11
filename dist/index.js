@@ -6,7 +6,7 @@ define(["require", "exports", "tools/get-page"], function (require, exports, get
     (function (TicketSystem) {
         function startProgram() {
             var filename = location.href.split('/')[5];
-            get_page_1.GetPage.from(filename);
+            get_page_1.GetPage.forHTML(filename);
         }
         TicketSystem.startProgram = startProgram;
     })(TicketSystem = exports.TicketSystem || (exports.TicketSystem = {}));

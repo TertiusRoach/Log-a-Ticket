@@ -13,7 +13,8 @@ define(["require", "exports"], function (require, exports) {
                 var button = loginButton;
                 var canvas = overlayCanvas;
                 var background = overlayBackground;
-                console.log('Index Overlay - Login Page' + logo, eForm, eSelect, text, button, canvas, background);
+                button.on('click', function () {
+                });
             }
             return loginPage;
         }());

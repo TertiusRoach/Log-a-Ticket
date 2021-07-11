@@ -5,7 +5,6 @@ define(["require", "exports"], function (require, exports) {
     var IndexBody;
     (function (IndexBody) {
         IndexBody.pushElements = function (indexBody, indexHeader, indexIframe, indexMain, indexOverlay) {
-            console.log('Index Body - Push Elements' + indexBody, indexHeader, indexIframe, indexMain, indexOverlay);
         };
     })(IndexBody = exports.IndexBody || (exports.IndexBody = {}));
 });
