@@ -1,0 +1,1 @@
+{"version":3,"sources":["tools/pages/tickets-header.ts"],"names":[],"mappings":";;;;IACA,IAAiB,aAAa,CAU7B;IAVD,WAAiB,aAAa;QACjB,0BAAY,GAAG,UACxB,YAAqC,EACrC,YAAqC,EACrC,UAAkC,EAClC,aAAqC,EACrC,eAAuC;QAGzC,CAAC,CAAC;IACJ,CAAC,EAVgB,aAAa,GAAb,qBAAa,KAAb,qBAAa,QAU7B","file":"tickets-header.js","sourceRoot":"../../../src"}

@@ -8,10 +8,10 @@ define(["require", "exports", "tools/build-body"], function (require, exports, b
             var page = filename.split('.')[0];
             switch (page) {
                 case 'index':
-                    new build_body_1.BuildBody.forID(page + "-body");
+                    new build_body_1.BuildBody.forID('index-body');
                     break;
                 case 'tickets':
-                    new build_body_1.BuildBody.forID(page + "-body");
+                    new build_body_1.BuildBody.forID('tickets-body');
                     break;
             }
         }
