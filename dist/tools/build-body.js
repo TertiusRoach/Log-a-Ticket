@@ -9,14 +9,14 @@ define(["require", "exports", "../index"], function (require, exports, index_1) 
                 this.id = id;
                 switch (id) {
                     case 'index-body':
-                        this.buildBody(id);
+                        this.buildHTML(id);
                         break;
                     case 'tickets-body':
-                        this.buildBody(id);
+                        this.buildHTML(id);
                         break;
                 }
             }
-            forID.prototype.buildBody = function (id) {
+            forID.prototype.buildHTML = function (id) {
                 var container = id;
                 var build = id;
                 switch (id) {

@@ -9,4 +9,4 @@ define(["require", "exports"], function (require, exports) {
     })(TicketsBody = exports.TicketsBody || (exports.TicketsBody = {}));
 });
 
-//# sourceMappingURL=dist/tools/containers/tickets-body.js.map
+//# sourceMappingURL=dist/tools/html/tickets-body.js.map

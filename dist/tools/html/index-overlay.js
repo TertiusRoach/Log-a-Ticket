@@ -28,4 +28,4 @@ define(["require", "exports"], function (require, exports) {
     })(IndexOverlay = exports.IndexOverlay || (exports.IndexOverlay = {}));
 });
 
-//# sourceMappingURL=dist/tools/containers/index-overlay.js.map
+//# sourceMappingURL=dist/tools/html/index-overlay.js.map

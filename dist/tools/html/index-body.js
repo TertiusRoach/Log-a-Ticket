@@ -9,4 +9,4 @@ define(["require", "exports"], function (require, exports) {
     })(IndexBody = exports.IndexBody || (exports.IndexBody = {}));
 });
 
-//# sourceMappingURL=dist/tools/containers/index-body.js.map
+//# sourceMappingURL=dist/tools/html/index-body.js.map
