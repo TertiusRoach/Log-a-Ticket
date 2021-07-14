@@ -4,7 +4,13 @@ define(["require", "exports"], function (require, exports) {
     exports.SyncUser = void 0;
     var SyncUser;
     (function (SyncUser) {
-        function toHeader(reference, instantiate) { }
+        function toHeader(reference, connect) {
+            for (var i = 0; i < reference.length; i++) {
+                if (reference.value === connect[i].value) {
+                    connect[i].selected = true;
+                }
+            }
+        }
         SyncUser.toHeader = toHeader;
     })(SyncUser = exports.SyncUser || (exports.SyncUser = {}));
 });
