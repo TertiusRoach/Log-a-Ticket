@@ -16,7 +16,6 @@ Terminal Commands
     npm install --save-dev typescript
     npm install requirejs
     npm i --save requirejs
-
     npm install -g gulp
     npm install jquery
 
@@ -37,7 +36,8 @@ VSC Extensions
 VSC Exclude (Preference)
 
     .git
-    vscode
+    .vscode
+    dist/*.js.map
     dist/*.map
     dist/cfgrequire.js
     dist/content

@@ -3,7 +3,7 @@ require.config({
   //   urlArgs: window['i4key'],
   baseUrl: '../',
   paths: {
-    jquery: ['jquery/3.6.0/3.6.0.min.js'],
+    jquery: ['libs/jquery/3.6.0/3.6.0.min'],
     start: ['index'],
   },
 });
@@ -11,8 +11,9 @@ require.config({
 require.onError = (err) => {
   debugger;
 };
-require(['jquery', 'start'], function (_jquery, prog) {
-  prog.TicketSystem.startProgram();
+require(['jquery', 'index'], function (jquery, index) {
+  console.log(`--RequireJS loaded for ${location.href.split('/')[5]}`);
+  index.TicketSystem.startProgram();
 }, function (err) {
   if (console && console.log) {
     console.trace();

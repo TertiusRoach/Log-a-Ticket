@@ -1,0 +1,1 @@
+{"version":3,"sources":["tools/events/index-header.ts"],"names":[],"mappings":";;;;IACA,IAAiB,aAAa,CAI7B;IAJD,WAAiB,aAAa;QAC5B,SAAgB,cAAc;YAC5B,OAAO,CAAC,GAAG,CAAC,mBAAmB,CAAC,CAAC;QACnC,CAAC;QAFe,4BAAc,iBAE7B,CAAA;IACH,CAAC,EAJgB,aAAa,GAAb,qBAAa,KAAb,qBAAa,QAI7B","file":"index-header.js","sourceRoot":"../../../src"}
