@@ -1,0 +1,1 @@
+{"version":3,"sources":["tools/sync-user.ts"],"names":[],"mappings":";;;;IACA,IAAiB,QAAQ,CAExB;IAFD,WAAiB,QAAQ;QACvB,SAAgB,QAAQ,CAAC,SAA6B,EAAE,WAAW,IAAG,CAAC;QAAvD,iBAAQ,WAA+C,CAAA;IACzE,CAAC,EAFgB,QAAQ,GAAR,gBAAQ,KAAR,gBAAQ,QAExB","file":"sync-user.js","sourceRoot":"../../src"}
