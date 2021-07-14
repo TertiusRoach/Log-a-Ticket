@@ -1,4 +1,4 @@
-define(["require", "exports", "tools/events/login-overlay"], function (require, exports, login_overlay_1) {
+define(["require", "exports", "tools/events/login-overlay", "tools/events/index-header"], function (require, exports, login_overlay_1, index_header_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.GetElements = void 0;
@@ -9,16 +9,21 @@ define(["require", "exports", "tools/events/login-overlay"], function (require, 
                 switch (activeHTML) {
                     case 'index.html':
                         if (selectPage === 'default-header') {
-                            var ticketButtonJQ = $('.ticket-button div');
-                            var loggedButtonJQ = $('.logged-button div');
-                            var manageButtonJQ = $('.manage-button div');
-                            var employeeFormJQ = $('.employee-form');
-                            var employeeSelectJQ = $('.employee-select');
-                            var ticketButtonJS = document.querySelector('.ticket-button div');
-                            var loggedButtonJS = document.querySelector('.logged-button div');
-                            var manageButtonJS = document.querySelector('.manage-button div');
-                            var employeeFormJS = document.querySelector('.employee-form');
-                            var employeeSelectJS = document.querySelector('.employee-select');
+                            var ticketButtonJQ = $('#index-header .ticket-button div');
+                            var loggedButtonJQ = $('#index-header .logged-button div');
+                            var manageButtonJQ = $('#index-header .manage-button div');
+                            var headerFormJQ = $('#index-header .employee-form');
+                            var headerSelectJQ = $('#index-header .employee-select');
+                            var loginFormJQ = $('.login-overlay  .employee-form');
+                            var loginSelectJQ = $('.login-overlay .employee-select');
+                            var ticketButtonJS = document.querySelector('#index-header .ticket-button div');
+                            var loggedButtonJS = document.querySelector('#index-header .logged-button div');
+                            var manageButtonJS = document.querySelector('#index-header .manage-button div');
+                            var headerFormJS = document.querySelector('#index-header .employee-form');
+                            var headerSelectJS = document.querySelector('#index-header .employee-select');
+                            var loginFormJS = document.querySelector('.login-overlay  .employee-form');
+                            var loginSelectJS = document.querySelector('.login-overlay .employee-select');
+                            new index_header_1.IndexHeader.initiateEvents(ticketButtonJQ, loggedButtonJQ, manageButtonJQ, headerFormJQ, headerSelectJQ, loginFormJQ, loginSelectJQ, ticketButtonJS, loggedButtonJS, manageButtonJS, headerFormJS, headerSelectJS, loginFormJS, loginSelectJS);
                         }
                         if (selectPage === 'login-overlay') {
                             var loginLogoJQ = $('.login-overlay .login-logo');

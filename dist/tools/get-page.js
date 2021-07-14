@@ -4,22 +4,23 @@ define(["require", "exports", "tools/get-elements"], function (require, exports,
     exports.GetPage = void 0;
     var GetPage;
     (function (GetPage) {
-        function forHTML(activeHTML, selectId, selectPage) {
-            var container = $("#" + selectId);
+        function forHTML(selectId, selectPage) {
+            var filename = location.href.split('/')[5];
+            var container = document.getElementById("" + selectId);
             $(container)
                 .removeClass("default-" + selectPage.split('-')[1])
                 .addClass("" + selectPage);
-            switch (activeHTML) {
+            switch (filename) {
                 case 'index.html':
                     $.get(selectPage + ".html", function (data) {
                         $(container).html(data);
-                        new get_elements_1.GetElements.initiateCode(activeHTML, selectPage);
+                        new get_elements_1.GetElements.initiateCode('index.html', selectPage);
                     });
                     break;
                 case 'tickets.html':
                     $.get(selectPage + ".html", function (data) {
                         $(container).html(data);
-                        new get_elements_1.GetElements.initiateCode(activeHTML, selectPage);
+                        new get_elements_1.GetElements.initiateCode('tickets.html', selectPage);
                     });
                     break;
             }
