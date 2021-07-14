@@ -23,12 +23,12 @@ Terminal Commands
 
 VSC Extensions
 
-    CSS Grid Snippets,
-    Gulp Tasks,
-    JavaScript (ES6) code snippets,
-    jQuery Code Snippets,
-    Live Server,
-    Material Icon Theme,
+    CSS Grid Snippets
+    Gulp Tasks
+    JavaScript (ES6) code snippets
+    jQuery Code Snippets
+    Live Server
+    Material Icon Theme
     Prettier - Code formatter
 
 ---

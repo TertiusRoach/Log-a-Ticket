@@ -5,8 +5,7 @@ define(["require", "exports", "tools/get-elements"], function (require, exports,
     var GetPage;
     (function (GetPage) {
         function forHTML(selectId, selectPage) {
-            var filename = location.href.split('/')[5];
-            console.log(location.href);
+            var filename = location.href.split('/')[6];
             var container = document.getElementById("" + selectId);
             $(container)
                 .removeClass("default-" + selectPage.split('-')[1])
