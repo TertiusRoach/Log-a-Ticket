@@ -12,8 +12,8 @@ define(["require", "exports", "tools/get-array", "tools/convert-string", "tools/
             }
         }
         SyncUser.toHeader = toHeader;
-        function toMain(loginSelect, loggedButton, manageButton) {
-            var selectedUser = convert_string_1.ConvertString.value('capitalize', '-', loginSelect);
+        function toMain(reference, loggedButton, manageButton) {
+            var selectedUser = convert_string_1.ConvertString.value('capitalize', '-', reference);
             for (var i = 0; i < get_array_1.GetArray.employeeList().length; i++) {
                 var arrayUser = get_array_1.GetArray.employeeList()[i].name + " " + get_array_1.GetArray.employeeList()[i].surname;
                 if (selectedUser === arrayUser) {
@@ -21,6 +21,7 @@ define(["require", "exports", "tools/get-array", "tools/convert-string", "tools/
                         case 'Manage':
                             get_elements_1.GetElements.indexMainJS.classList.remove('logged-main');
                             loggedButton.classList.remove('active-button');
+                            loggedButton.classList.add('default-button');
                             manageButton.classList.remove('default-button');
                             manageButton.classList.add('active-button');
                             get_page_1.GetPage.forHTML('index-main', 'manage-main');
@@ -28,6 +29,7 @@ define(["require", "exports", "tools/get-array", "tools/convert-string", "tools/
                         case 'Logged':
                             get_elements_1.GetElements.indexMainJS.classList.remove('manage-main');
                             manageButton.classList.remove('active-button');
+                            manageButton.classList.add('default-button');
                             loggedButton.classList.remove('default-button');
                             loggedButton.classList.add('active-button');
                             get_page_1.GetPage.forHTML('index-main', 'logged-main');

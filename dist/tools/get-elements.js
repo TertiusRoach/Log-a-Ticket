@@ -45,6 +45,9 @@ define(["require", "exports", "tools/events/login-overlay", "tools/events/index-
                             var loginButtonJQ = $('.login-overlay  .login-button div');
                             var overlayCanvasJQ = $('.login-overlay  .overlay-canvas');
                             var overlayBackgroundJQ = $('.login-overlay  .overlay-background');
+                            var loggedButtonJQ = $('#index-header .logged-button div');
+                            var manageButtonJQ = $('#index-header .manage-button div');
+                            var headerSelectJQ = $('#index-header .employee-select');
                             var loginLogoJS = document.querySelector('.login-overlay  .login-logo');
                             var employeeFormJS = document.querySelector('.login-overlay  .employee-form');
                             var employeeSelectJS = document.querySelector('.login-overlay  .employee-select');
@@ -52,7 +55,10 @@ define(["require", "exports", "tools/events/login-overlay", "tools/events/index-
                             var loginButtonJS = document.querySelector('.login-overlay  .login-button div');
                             var overlayCanvasJS = document.querySelector('.login-overlay  .overlay-canvas');
                             var overlayBackgroundJS = document.querySelector('.login-overlay  .overlay-background');
-                            new login_overlay_1.LoginOverlay.initiateEvents(loginLogoJQ, employeeFormJQ, employeeSelectJQ, informationTextJQ, loginButtonJQ, overlayCanvasJQ, overlayBackgroundJQ, loginLogoJS, employeeFormJS, employeeSelectJS, informationTextJS, loginButtonJS, overlayCanvasJS, overlayBackgroundJS);
+                            var loggedButtonJS = document.querySelector('#index-header .logged-button div');
+                            var manageButtonJS = document.querySelector('#index-header .manage-button div');
+                            var headerSelectJS = document.querySelector('#index-header .employee-select');
+                            new login_overlay_1.LoginOverlay.initiateEvents(loginLogoJQ, employeeFormJQ, employeeSelectJQ, informationTextJQ, loginButtonJQ, overlayCanvasJQ, overlayBackgroundJQ, loggedButtonJQ, manageButtonJQ, headerSelectJQ, loginLogoJS, employeeFormJS, employeeSelectJS, informationTextJS, loginButtonJS, overlayCanvasJS, overlayBackgroundJS, loggedButtonJS, manageButtonJS, headerSelectJS);
                         }
                         break;
                     case 'tickets.html':
