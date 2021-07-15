@@ -4,7 +4,7 @@ define(["require", "exports", "tools/build-dropdown", "tools/sync-user"], functi
     exports.IndexHeader = void 0;
     var IndexHeader;
     (function (IndexHeader) {
-        function initiateEvents(ticketButtonJQ, loggedButtonJQ, manageButtonJQ, headerFormJQ, headerSelectJQ, loginFormJQ, loginSelectJQ, ticketButtonJS, loggedButtonJS, manageButtonJS, headerFormJS, headerSelectJS, loginFormJS, loginSelectJS) {
+        function initiateEvents(ticketButtonJQ, loggedButtonJQ, manageButtonJQ, headerFormJQ, headerSelectJQ, loginFormJQ, loginSelectJQ, loginButtonJQ, ticketButtonJS, loggedButtonJS, manageButtonJS, headerFormJS, headerSelectJS, loginFormJS, loginSelectJS, loginButtonJS) {
             loginFormJQ.on('click', function () {
                 if (headerSelectJS.value === 'pick-employee') {
                     build_dropdown_1.BuildDropdown.assemble(headerSelectJS, 'employees');
@@ -12,6 +12,9 @@ define(["require", "exports", "tools/build-dropdown", "tools/sync-user"], functi
             });
             loginSelectJQ.on('change', function () {
                 sync_user_1.SyncUser.toHeader(loginSelectJS, headerSelectJS);
+            });
+            loginButtonJQ.on('click', function () {
+                sync_user_1.SyncUser.toMain(loginSelectJS, loggedButtonJS, manageButtonJS);
             });
         }
         IndexHeader.initiateEvents = initiateEvents;
