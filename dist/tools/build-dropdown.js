@@ -12,7 +12,6 @@ define(["require", "exports", "tools/get-array"], function (require, exports, ge
                         var optionElement = document.createElement('option');
                         optionElement.text = get_array_1.GetArray.employeeList()[i].name + " " + get_array_1.GetArray.employeeList()[i].surname;
                         optionElement.value = optionElement.text.replace(' ', '-').toLowerCase();
-                        optionElement.style.fontFamily = 'Baloo Bhai 2';
                         selectContainer.add(optionElement);
                     }
                     break;

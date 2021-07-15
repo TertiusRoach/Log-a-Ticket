@@ -6,9 +6,8 @@ define(["require", "exports", "tools/get-elements"], function (require, exports,
     (function (GetPage) {
         function forHTML(selectId, selectClass) {
             var container = document.getElementById("" + selectId);
-            $(container)
-                .removeClass("default-" + selectClass.split('-')[1])
-                .addClass("" + selectClass);
+            this.deleteClass(container, selectClass);
+            $(container).addClass("" + selectClass);
             switch (checkNetwork()) {
                 case 'index.html':
                     $.get(selectClass + ".html", function (data) {
@@ -38,6 +37,15 @@ define(["require", "exports", "tools/get-elements"], function (require, exports,
             return filename;
         }
         GetPage.checkNetwork = checkNetwork;
+        function deleteClass(container, selectClass) {
+            $(container)
+                .removeClass("default-" + selectClass.split('-')[1])
+                .removeClass('logged-main')
+                .removeClass('manage-main')
+                .removeClass('login-overlay')
+                .removeClass('log-overlay');
+        }
+        GetPage.deleteClass = deleteClass;
     })(GetPage = exports.GetPage || (exports.GetPage = {}));
 });
 

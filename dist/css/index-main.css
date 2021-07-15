@@ -19,16 +19,10 @@
   grid-row: 2/4;
   border-radius: 1rem 1rem 0 0;
 }
-.logged-main #pending-tab h3:hover {
-  color: #f8af58;
-}
 .logged-main #assigned-tab {
   grid-column: 4/5;
   grid-row: 2/4;
   border-radius: 1rem 1rem 0 0;
-}
-.logged-main #assigned-tab h3:hover {
-  color: #4c72a4;
 }
 .logged-main .notification {
   grid-column: 6/7;
@@ -42,24 +36,15 @@
   grid-row: 2/4;
   border-radius: 1rem 1rem 0 0;
 }
-.logged-main #resolved-tab h3:hover {
-  color: #08870c;
-}
 .logged-main #deleted-tab {
   grid-column: 8/9;
   grid-row: 18/20;
   border-radius: 0 0 1rem 1rem;
 }
-.logged-main #deleted-tab h3:hover {
-  color: #f95555;
-}
 .logged-main #everything-tab {
   grid-column: 2/3;
   grid-row: 18/20;
   border-radius: 0 0 1rem 1rem;
-}
-.logged-main #everything-tab h3:hover {
-  color: #fff;
 }
 .logged-main [id*=-tab]:hover {
   box-shadow: none;
@@ -69,13 +54,29 @@
   background: #084887;
 }
 .logged-main [id*=-tab] h3:hover {
-  cursor: pointer;
+  cursor: alias;
+}
+.logged-main #pending-tab h3:hover {
+  color: #f8af58;
+}
+.logged-main #assigned-tab h3:hover {
+  color: #4c72a4;
+}
+.logged-main #resolved-tab h3:hover {
+  color: #08870c;
+}
+.logged-main #deleted-tab h3:hover {
+  color: #f95555;
+}
+.logged-main #everything-tab h3:hover {
+  color: #fff;
 }
 
 .logged-main [id*=-tab] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   color: #084887;
   background: #909cc2;
 }
@@ -96,9 +97,6 @@
   grid-row: 2/4;
   border-radius: 1rem 1rem 0 0;
 }
-.manage-main #pending-tab h3:hover {
-  color: #f8af58;
-}
 .manage-main .notification {
   grid-column: 4/9;
   grid-row: 2/4;
@@ -113,16 +111,10 @@
   grid-row: 18/20;
   border-radius: 0 0 1rem 1rem;
 }
-.manage-main #deleted-tab h3:hover {
-  color: #f95555;
-}
 .manage-main #everything-tab {
   grid-column: 2/3;
   grid-row: 18/20;
   border-radius: 0 0 1rem 1rem;
-}
-.manage-main #everything-tab h3:hover {
-  color: #fff;
 }
 .manage-main [id*=-tab]:hover {
   box-shadow: none;
@@ -132,13 +124,23 @@
   background: #084887;
 }
 .manage-main [id*=-tab] h3:hover {
-  cursor: pointer;
+  cursor: alias;
+}
+.manage-main #pending-tab h3:hover {
+  color: #f8af58;
+}
+.manage-main #deleted-tab h3:hover {
+  color: #f95555;
+}
+.manage-main #everything-tab h3:hover {
+  color: #fff;
 }
 
 .manage-main [id*=-tab] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   color: #084887;
   background: #909cc2;
 }

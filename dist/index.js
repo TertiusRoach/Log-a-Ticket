@@ -5,8 +5,8 @@ define(["require", "exports", "tools/get-page"], function (require, exports, get
     var TicketSystem;
     (function (TicketSystem) {
         function startProgram() {
-            get_page_1.GetPage.forHTML('index-overlay', 'login-overlay');
             get_page_1.GetPage.forHTML('index-header', 'default-header');
+            get_page_1.GetPage.forHTML('index-overlay', 'login-overlay');
         }
         TicketSystem.startProgram = startProgram;
     })(TicketSystem = exports.TicketSystem || (exports.TicketSystem = {}));

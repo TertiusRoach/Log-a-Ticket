@@ -27,6 +27,13 @@ define(["require", "exports"], function (require, exports) {
             }
         }
         StyleElement.playdown = playdown;
+        function button(highlight, playdown) {
+            playdown.classList.remove('active-button');
+            highlight.classList.remove('default-button');
+            highlight.classList.add('active-button');
+            playdown.classList.add('default-button');
+        }
+        StyleElement.button = button;
     })(StyleElement = exports.StyleElement || (exports.StyleElement = {}));
 });
 
