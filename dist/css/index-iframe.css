@@ -4,14 +4,16 @@
 #index-iframe {
   grid-column: 2/9;
   grid-row: 5/19;
+  z-index: 0;
+  width: 142.88%;
+  height: 105%;
   display: flex;
-  width: 143%;
   border-top: solid 4px #084887;
   border-bottom: solid 4px #084887;
 }
 
-/*--▼ iframe-canvas ▼--*/
-.default-iframe {
+/*--▼ default-iframe ▼--*/
+.default-iframe iframe {
   grid-column: 2/9;
   grid-row: 5/19;
 }

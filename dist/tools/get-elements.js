@@ -16,6 +16,7 @@ define(["require", "exports", "tools/events/login-overlay", "tools/events/index-
                             var headerSelectJQ = $('#index-header .employee-select');
                             var loginFormJQ = $('.login-overlay  .employee-form');
                             var loginSelectJQ = $('.login-overlay .employee-select');
+                            var loginButtonJQ = $('.login-overlay  .login-button div');
                             var ticketButtonJS = document.querySelector('#index-header .ticket-button div');
                             var loggedButtonJS = document.querySelector('#index-header .logged-button div');
                             var manageButtonJS = document.querySelector('#index-header .manage-button div');
@@ -23,7 +24,8 @@ define(["require", "exports", "tools/events/login-overlay", "tools/events/index-
                             var headerSelectJS = document.querySelector('#index-header .employee-select');
                             var loginFormJS = document.querySelector('.login-overlay  .employee-form');
                             var loginSelectJS = document.querySelector('.login-overlay .employee-select');
-                            new index_header_1.IndexHeader.initiateEvents(ticketButtonJQ, loggedButtonJQ, manageButtonJQ, headerFormJQ, headerSelectJQ, loginFormJQ, loginSelectJQ, ticketButtonJS, loggedButtonJS, manageButtonJS, headerFormJS, headerSelectJS, loginFormJS, loginSelectJS);
+                            var loginButtonJS = document.querySelector('.login-overlay  .login-button div');
+                            new index_header_1.IndexHeader.initiateEvents(ticketButtonJQ, loggedButtonJQ, manageButtonJQ, headerFormJQ, headerSelectJQ, loginFormJQ, loginSelectJQ, loginButtonJQ, ticketButtonJS, loggedButtonJS, manageButtonJS, headerFormJS, headerSelectJS, loginFormJS, loginSelectJS, loginButtonJS);
                         }
                         if (selectPage === 'login-overlay') {
                             var loginLogoJQ = $('.login-overlay .login-logo');
