@@ -1,13 +1,13 @@
-define(["require", "exports", "tools/get-array", "tools/convert-string"], function (require, exports, get_array_1, convert_string_1) {
+define(["require", "exports", "tools/get-array", "tools/convert-string", "tools/get-page", "./get-elements"], function (require, exports, get_array_1, convert_string_1, get_page_1, get_elements_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.SyncUser = void 0;
     var SyncUser;
     (function (SyncUser) {
-        function toHeader(reference, connect) {
+        function toHeader(reference, connectContainer) {
             for (var i = 0; i < reference.length; i++) {
-                if (reference.value === connect[i].value) {
-                    connect[i].selected = true;
+                if (reference.value === connectContainer[i].value) {
+                    connectContainer[i].selected = true;
                 }
             }
         }
@@ -19,12 +19,18 @@ define(["require", "exports", "tools/get-array", "tools/convert-string"], functi
                 if (selectedUser === arrayUser) {
                     switch (get_array_1.GetArray.employeeList()[i].ticketPage) {
                         case 'Manage':
+                            get_elements_1.GetElements.indexMainJS.classList.remove('logged-main');
+                            loggedButton.classList.remove('active-button');
                             manageButton.classList.remove('default-button');
                             manageButton.classList.add('active-button');
+                            get_page_1.GetPage.forHTML('index-main', 'manage-main');
                             break;
                         case 'Logged':
+                            get_elements_1.GetElements.indexMainJS.classList.remove('manage-main');
+                            manageButton.classList.remove('active-button');
                             loggedButton.classList.remove('default-button');
                             loggedButton.classList.add('active-button');
+                            get_page_1.GetPage.forHTML('index-main', 'logged-main');
                             break;
                     }
                 }

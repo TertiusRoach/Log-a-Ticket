@@ -12,9 +12,9 @@ define(["require", "exports", "tools/build-dropdown", "tools/sync-user"], functi
             });
             loginSelectJQ.on('change', function () {
                 sync_user_1.SyncUser.toHeader(loginSelectJS, headerSelectJS);
+                sync_user_1.SyncUser.toMain(loginSelectJS, loggedButtonJS, manageButtonJS);
             });
             loginButtonJQ.on('click', function () {
-                sync_user_1.SyncUser.toMain(loginSelectJS, loggedButtonJS, manageButtonJS);
             });
         }
         IndexHeader.initiateEvents = initiateEvents;
