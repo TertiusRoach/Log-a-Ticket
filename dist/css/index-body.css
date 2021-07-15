@@ -89,3 +89,13 @@
 #index-body textarea:hover {
   border: 2px solid #f8af58;
 }
+#index-body span {
+  padding: 0 13.11667px;
+  border-radius: 50%;
+  background: #f58a07;
+  cursor: default;
+}
+#index-body span h4 {
+  padding-top: 4px;
+  color: #fff;
+}
