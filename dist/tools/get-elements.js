@@ -4,11 +4,21 @@ define(["require", "exports", "tools/events/login-overlay", "tools/events/index-
     exports.GetElements = void 0;
     var GetElements;
     (function (GetElements) {
+        GetElements.indexBodyJQ = $('#index-body');
+        GetElements.IndexHeaderJQ = $('#index-header');
+        GetElements.indexIframeJQ = $('#index-iframe');
+        GetElements.indexMainJQ = $('#index-main');
+        GetElements.indexOverlayJQ = $('#index-overlay');
+        GetElements.indexBodyJS = document.querySelector('#index-body');
+        GetElements.IndexHeaderJS = document.querySelector('#index-header');
+        GetElements.indexIframeJS = document.querySelector('#index-iframe');
+        GetElements.indexMainJS = document.querySelector('#index-main');
+        GetElements.indexOverlayJS = document.querySelector('#index-overlay');
         var initiateCode = (function () {
-            function initiateCode(activeHTML, selectPage) {
+            function initiateCode(activeHTML, selectClass) {
                 switch (activeHTML) {
                     case 'index.html':
-                        if (selectPage === 'default-header') {
+                        if (selectClass === 'default-header') {
                             var ticketButtonJQ = $('#index-header .ticket-button div');
                             var loggedButtonJQ = $('#index-header .logged-button div');
                             var manageButtonJQ = $('#index-header .manage-button div');
@@ -27,7 +37,7 @@ define(["require", "exports", "tools/events/login-overlay", "tools/events/index-
                             var loginButtonJS = document.querySelector('.login-overlay  .login-button div');
                             new index_header_1.IndexHeader.initiateEvents(ticketButtonJQ, loggedButtonJQ, manageButtonJQ, headerFormJQ, headerSelectJQ, loginFormJQ, loginSelectJQ, loginButtonJQ, ticketButtonJS, loggedButtonJS, manageButtonJS, headerFormJS, headerSelectJS, loginFormJS, loginSelectJS, loginButtonJS);
                         }
-                        if (selectPage === 'login-overlay') {
+                        if (selectClass === 'login-overlay') {
                             var loginLogoJQ = $('.login-overlay .login-logo');
                             var employeeFormJQ = $('.login-overlay  .employee-form');
                             var employeeSelectJQ = $('.login-overlay  .employee-select');
@@ -46,7 +56,7 @@ define(["require", "exports", "tools/events/login-overlay", "tools/events/index-
                         }
                         break;
                     case 'tickets.html':
-                        if (selectPage === 'default-header') {
+                        if (selectClass === 'default-header') {
                         }
                         break;
                 }

@@ -14,6 +14,9 @@ define(["require", "exports", "tools/build-dropdown", "tools/style-element", "to
                 }
                 else {
                     toggle_view_1.ToggleView.pageContainer('hide', 'index-overlay', 'login-overlay');
+                    toggle_view_1.ToggleView.pageContainer('show', 'index-header', 'default-header');
+                    toggle_view_1.ToggleView.pageContainer('show', 'index-iframe', 'default-iframe');
+                    toggle_view_1.ToggleView.pageContainer('show', 'index-main', 'default-main');
                 }
             });
             employeeFormJQ.on('click', function () {

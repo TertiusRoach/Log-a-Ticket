@@ -20,8 +20,8 @@ define(["require", "exports"], function (require, exports) {
             }
         }
         ConvertString.value = value;
-        function fetch(action, pageClass) {
-            var separate = pageClass.split('-');
+        function fetch(action, pageContainer) {
+            var separate = pageContainer.split('-');
             var fetched;
             switch (action) {
                 case 'former':
