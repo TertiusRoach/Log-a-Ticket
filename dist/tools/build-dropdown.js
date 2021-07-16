@@ -4,10 +4,10 @@ define(["require", "exports", "tools/get-array"], function (require, exports, ge
     exports.BuildDropdown = void 0;
     var BuildDropdown;
     (function (BuildDropdown) {
-        function assemble(selectContainer, build) {
-            selectContainer.innerHTML = '';
+        function assemble(build, selectContainer, referenceContainer) {
             switch (build) {
                 case 'employees':
+                    selectContainer.innerHTML = '';
                     for (var i = 0; i < get_array_1.GetArray.employeeList().length; i++) {
                         var optionElement = document.createElement('option');
                         optionElement.text = get_array_1.GetArray.employeeList()[i].name + " " + get_array_1.GetArray.employeeList()[i].surname;
@@ -16,8 +16,16 @@ define(["require", "exports", "tools/get-array"], function (require, exports, ge
                     }
                     break;
                 case 'departments':
+                    selectContainer.innerHTML = '';
+                    for (var i = 0; i < get_array_1.GetArray.departmentList().length; i++) {
+                        var optionElement = document.createElement('option');
+                        optionElement.text = "" + get_array_1.GetArray.departmentList()[i].department;
+                        optionElement.value = ("" + get_array_1.GetArray.departmentList()[i].department).replace(' ', '-').toLowerCase();
+                        selectContainer.add(optionElement);
+                    }
                     break;
                 case 'coworkers':
+                    console.log(referenceContainer.value);
                     break;
             }
         }

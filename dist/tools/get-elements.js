@@ -1,4 +1,4 @@
-define(["require", "exports", "tools/events/login-overlay", "tools/events/index-header"], function (require, exports, login_overlay_1, index_header_1) {
+define(["require", "exports", "tools/events/index-header", "tools/events/login-overlay", "tools/events/log-overlay"], function (require, exports, index_header_1, login_overlay_1, log_overlay_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.GetElements = void 0;
@@ -59,6 +59,37 @@ define(["require", "exports", "tools/events/login-overlay", "tools/events/index-
                             var manageButtonJS = document.querySelector('#index-header .manage-button div');
                             var headerSelectJS = document.querySelector('#index-header .employee-select');
                             new login_overlay_1.LoginOverlay.initiateEvents(loginLogoJQ, employeeFormJQ, employeeSelectJQ, informationTextJQ, loginButtonJQ, overlayCanvasJQ, overlayBackgroundJQ, loggedButtonJQ, manageButtonJQ, headerSelectJQ, loginLogoJS, employeeFormJS, employeeSelectJS, informationTextJS, loginButtonJS, overlayCanvasJS, overlayBackgroundJS, loggedButtonJS, manageButtonJS, headerSelectJS);
+                        }
+                        if (selectClass === 'log-overlay') {
+                            var closeButtonJQ = $('.log-overlay .close-button div');
+                            var logButtonJQ = $('.log-overlay .log-button div');
+                            var ticketSubjectJQ = $('.log-overlay .ticket-subject');
+                            var ticketDescriptionJQ = $('.log-overlay .ticket-description');
+                            var departmentFormJQ = $('.log-overlay .department-form');
+                            var departmentSelectJQ = $('.log-overlay .department-select');
+                            var coworkerFormJQ = $('.log-overlay .coworker-form');
+                            var coworkerSelectJQ = $('.log-overlay .coworker-select');
+                            var emailTextJQ = $('.log-overlay .email-text');
+                            var numberTextJQ = $('.log-overlay .number-text');
+                            var overlayCanvasJQ = $('.log-overlay .overlay-canvas');
+                            var overlayBackgroundJQ = $('.log-overlay .overlay-background');
+                            var ticketButtonJQ = $('#index-header .ticket-button div');
+                            var headerSelectJQ = $('#index-header .employee-select');
+                            var closeButtonJS = document.querySelector('.log-overlay .close-button div');
+                            var logButtonJS = document.querySelector('.log-overlay .log-button div');
+                            var ticketSubjectJS = document.querySelector('.log-overlay .ticket-subject');
+                            var ticketDescriptionJS = document.querySelector('.log-overlay .ticket-description');
+                            var departmentFormJS = document.querySelector('.log-overlay .department-form');
+                            var departmentSelectJS = document.querySelector('.log-overlay .department-select');
+                            var coworkerFormJS = document.querySelector('.log-overlay .coworker-form');
+                            var coworkerSelectJS = document.querySelector('.log-overlay .coworker-select');
+                            var emailTextJS = document.querySelector('.log-overlay .email-text');
+                            var numberTextJS = document.querySelector('.log-overlay .number-text');
+                            var overlayCanvasJS = document.querySelector('.log-overlay .overlay-canvas');
+                            var overlayBackgroundJS = document.querySelector('.log-overlay .overlay-background');
+                            var ticketButtonJS = document.querySelector('#index-header .ticket-button div');
+                            var headerSelectJS = document.querySelector('#index-header .employee-select');
+                            new log_overlay_1.LogOverlay.initiateEvents(closeButtonJQ, logButtonJQ, ticketSubjectJQ, ticketDescriptionJQ, departmentFormJQ, departmentSelectJQ, coworkerFormJQ, coworkerSelectJQ, emailTextJQ, numberTextJQ, overlayCanvasJQ, overlayBackgroundJQ, ticketButtonJQ, headerSelectJQ, closeButtonJS, logButtonJS, ticketSubjectJS, ticketDescriptionJS, departmentFormJS, departmentSelectJS, coworkerFormJS, coworkerSelectJS, emailTextJS, numberTextJS, overlayCanvasJS, overlayBackgroundJS, ticketButtonJS, headerSelectJS);
                         }
                         break;
                     case 'tickets.html':
