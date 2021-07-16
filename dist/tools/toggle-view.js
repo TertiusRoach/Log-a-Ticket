@@ -4,7 +4,7 @@ define(["require", "exports", "tools/convert-string"], function (require, export
     exports.ToggleView = void 0;
     var ToggleView;
     (function (ToggleView) {
-        function page(action, containerId, containerClass) {
+        function page(action, containerId) {
             var container = document.getElementById("" + containerId);
             switch (action) {
                 case 'show':
@@ -21,6 +21,10 @@ define(["require", "exports", "tools/convert-string"], function (require, export
                             var main = document.getElementById(containerId);
                             main.style.display = 'grid';
                             break;
+                        case 'overlay':
+                            var overlay = document.getElementById(containerId);
+                            overlay.style.display = 'grid';
+                            break;
                     }
                     break;
                 case 'hide':
@@ -28,10 +32,49 @@ define(["require", "exports", "tools/convert-string"], function (require, export
                         container.innerHTML = '';
                     }
                     container.style.display = 'none';
+                    container.classList.remove("" + container.classList[0]);
+                    switch (convert_string_1.ConvertString.fetch('latter', containerId)) {
+                        case 'header':
+                            container.classList.add('default-header');
+                            break;
+                        case 'iframe':
+                            container.classList.add('default-iframe');
+                            break;
+                        case 'main':
+                            container.classList.add('default-main');
+                            break;
+                        case 'overlay':
+                            container.classList.add('default-overlay');
+                            break;
+                    }
                     break;
             }
         }
         ToggleView.page = page;
+        function form(action, formClass) {
+            switch (action) {
+                case 'show':
+                    formClass.style.display = 'flex';
+                    break;
+                case 'hide':
+                    formClass.style.display = 'none';
+                    break;
+            }
+        }
+        ToggleView.form = form;
+        function indexMain(action) {
+            switch (action) {
+                case 'show':
+                    this.page('show', 'index-main');
+                    this.page('show', 'index-iframe');
+                    break;
+                case 'hide':
+                    this.page('hide', 'index-main');
+                    this.page('hide', 'index-iframe');
+                    break;
+            }
+        }
+        ToggleView.indexMain = indexMain;
     })(ToggleView = exports.ToggleView || (exports.ToggleView = {}));
 });
 

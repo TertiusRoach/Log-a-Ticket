@@ -1,4 +1,4 @@
-define(["require", "exports", "tools/build-dropdown", "tools/style-element", "tools/replace-text", "tools/toggle-view", "tools/sync-user"], function (require, exports, build_dropdown_1, style_element_1, replace_text_1, toggle_view_1, sync_user_1) {
+define(["require", "exports", "tools/replace-dropdown", "tools/style-element", "tools/replace-text", "tools/toggle-view", "tools/sync-user"], function (require, exports, replace_dropdown_1, style_element_1, replace_text_1, toggle_view_1, sync_user_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.LoginOverlay = void 0;
@@ -8,13 +8,13 @@ define(["require", "exports", "tools/build-dropdown", "tools/style-element", "to
             employeeSelectJQ
                 .on('click', function () {
                 if (employeeSelectJS.value === 'pick-employee') {
-                    build_dropdown_1.BuildDropdown.assemble(employeeSelectJS, 'employees');
+                    replace_dropdown_1.ReplaceDropdown.assemble('employees', employeeSelectJS);
                     style_element_1.StyleElement.highlight('button', loginButtonJS);
                     style_element_1.StyleElement.playdown('select', employeeSelectJS);
                 }
             })
                 .on('change', function () {
-                build_dropdown_1.BuildDropdown.assemble(headerSelectJS, 'employees');
+                replace_dropdown_1.ReplaceDropdown.assemble('employees', headerSelectJS);
                 sync_user_1.SyncUser.toHeader(employeeSelectJS, headerSelectJS);
                 replace_text_1.ReplaceText.loginOverlay(employeeSelectJS, informationTextJS);
                 sync_user_1.SyncUser.toMain(headerSelectJS, loggedButtonJS, manageButtonJS);
@@ -24,10 +24,10 @@ define(["require", "exports", "tools/build-dropdown", "tools/style-element", "to
                     style_element_1.StyleElement.highlight('select', employeeSelectJS);
                 }
                 else {
-                    toggle_view_1.ToggleView.page('hide', 'index-overlay', 'login-overlay');
-                    toggle_view_1.ToggleView.page('show', 'index-header', 'default-header');
-                    toggle_view_1.ToggleView.page('show', 'index-iframe', 'default-iframe');
-                    toggle_view_1.ToggleView.page('show', 'index-main', 'default-main');
+                    toggle_view_1.ToggleView.page('hide', 'index-overlay');
+                    toggle_view_1.ToggleView.page('show', 'index-header');
+                    toggle_view_1.ToggleView.page('show', 'index-iframe');
+                    toggle_view_1.ToggleView.page('show', 'index-main');
                 }
             });
             overlayCanvasJQ.on('click', function () {
