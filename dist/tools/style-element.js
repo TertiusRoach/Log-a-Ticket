@@ -25,7 +25,7 @@ define(["require", "exports"], function (require, exports) {
         function playdown(type, element) {
             switch (type) {
                 case 'button':
-                    element.style.color = '#084887';
+                    element.style.color = '#4c72a4';
                     break;
                 case 'select':
                     element.style.removeProperty('border');

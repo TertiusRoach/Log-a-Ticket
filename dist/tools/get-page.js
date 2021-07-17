@@ -1,4 +1,4 @@
-define(["require", "exports", "tools/get-elements"], function (require, exports, get_elements_1) {
+define(["require", "exports", "tools/get-elements", "tools/convert-string"], function (require, exports, get_elements_1, convert_string_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.GetPage = void 0;
@@ -10,16 +10,32 @@ define(["require", "exports", "tools/get-elements"], function (require, exports,
             $(container).addClass("" + selectClass);
             switch (checkNetwork()) {
                 case 'index.html':
-                    $.get(selectClass + ".html", function (data) {
-                        $(container).html(data);
-                        new get_elements_1.GetElements.initiateCode('index.html', selectClass);
-                    });
+                    if (convert_string_1.ConvertString.fetch('former', selectClass) === 'default') {
+                        $.get(selectId + ".html", function (data) {
+                            $(container).html(data);
+                            new get_elements_1.GetElements.initiateCode('index.html', selectClass);
+                        });
+                    }
+                    else {
+                        $.get(selectClass + ".html", function (data) {
+                            $(container).html(data);
+                            new get_elements_1.GetElements.initiateCode('index.html', selectClass);
+                        });
+                    }
                     break;
                 case 'tickets.html':
-                    $.get(selectClass + ".html", function (data) {
-                        $(container).html(data);
-                        new get_elements_1.GetElements.initiateCode('tickets.html', selectClass);
-                    });
+                    if (convert_string_1.ConvertString.fetch('former', selectClass) === 'default') {
+                        $.get(selectId + ".html", function (data) {
+                            $(container).html(data);
+                            new get_elements_1.GetElements.initiateCode('tickets.html', selectClass);
+                        });
+                    }
+                    else {
+                        $.get(selectClass + ".html", function (data) {
+                            $(container).html(data);
+                            new get_elements_1.GetElements.initiateCode('tickets.html', selectClass);
+                        });
+                    }
                     break;
             }
         }

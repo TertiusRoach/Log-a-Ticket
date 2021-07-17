@@ -1,4 +1,4 @@
-define(["require", "exports", "tools/replace-dropdown", "tools/sync-user", "tools/style-element", "tools/get-page", "tools/toggle-view"], function (require, exports, replace_dropdown_1, sync_user_1, style_element_1, get_page_1, toggle_view_1) {
+define(["require", "exports", "tools/replace-dropdown", "tools/style-element", "tools/toggle-view", "tools/sync-user", "tools/get-page"], function (require, exports, replace_dropdown_1, style_element_1, toggle_view_1, sync_user_1, get_page_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.IndexHeader = void 0;
