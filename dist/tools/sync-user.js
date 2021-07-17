@@ -1,4 +1,4 @@
-define(["require", "exports", "tools/get-array", "tools/convert-string", "tools/get-page", "./get-elements"], function (require, exports, get_array_1, convert_string_1, get_page_1, get_elements_1) {
+define(["require", "exports", "tools/convert-string", "tools/get-elements", "tools/get-array", "tools/get-page"], function (require, exports, convert_string_1, get_elements_1, get_array_1, get_page_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.SyncUser = void 0;
@@ -19,7 +19,7 @@ define(["require", "exports", "tools/get-array", "tools/convert-string", "tools/
                 if (selectedUser === arrayUser) {
                     switch (get_array_1.GetArray.employeeList()[i].ticketPage) {
                         case 'Manage':
-                            get_elements_1.GetElements.indexMainJS.classList.remove('logged-main');
+                            get_elements_1.GetContainer.indexMainJS.classList.remove('logged-main');
                             loggedButton.classList.remove('active-button');
                             loggedButton.classList.add('default-button');
                             manageButton.classList.remove('default-button');
@@ -27,7 +27,7 @@ define(["require", "exports", "tools/get-array", "tools/convert-string", "tools/
                             get_page_1.GetPage.forHTML('index-main', 'manage-main');
                             break;
                         case 'Logged':
-                            get_elements_1.GetElements.indexMainJS.classList.remove('manage-main');
+                            get_elements_1.GetContainer.indexMainJS.classList.remove('manage-main');
                             manageButton.classList.remove('active-button');
                             manageButton.classList.add('default-button');
                             loggedButton.classList.remove('default-button');
