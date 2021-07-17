@@ -61,6 +61,7 @@ define(["require", "exports", "tools/events/index-header", "tools/events/login-o
                             new login_overlay_1.LoginOverlay.initiateEvents(loginLogoJQ, employeeFormJQ, employeeSelectJQ, informationTextJQ, loginButtonJQ, overlayCanvasJQ, overlayBackgroundJQ, loggedButtonJQ, manageButtonJQ, headerSelectJQ, loginLogoJS, employeeFormJS, employeeSelectJS, informationTextJS, loginButtonJS, overlayCanvasJS, overlayBackgroundJS, loggedButtonJS, manageButtonJS, headerSelectJS);
                         }
                         if (selectClass === 'log-overlay') {
+                            var overlayHeaderJQ = $('.log-overlay .overlay-header');
                             var closeButtonJQ = $('.log-overlay .close-button div');
                             var logButtonJQ = $('.log-overlay .log-button div');
                             var ticketSubjectJQ = $('.log-overlay .ticket-subject');
@@ -75,6 +76,7 @@ define(["require", "exports", "tools/events/index-header", "tools/events/login-o
                             var overlayBackgroundJQ = $('.log-overlay .overlay-background');
                             var ticketButtonJQ = $('#index-header .ticket-button div');
                             var headerSelectJQ = $('#index-header .employee-select');
+                            var overlayHeaderJS = document.querySelector('.log-overlay .overlay-header');
                             var closeButtonJS = document.querySelector('.log-overlay .close-button div');
                             var logButtonJS = document.querySelector('.log-overlay .log-button div');
                             var ticketSubjectJS = document.querySelector('.log-overlay .ticket-subject');
@@ -89,7 +91,7 @@ define(["require", "exports", "tools/events/index-header", "tools/events/login-o
                             var overlayBackgroundJS = document.querySelector('.log-overlay .overlay-background');
                             var ticketButtonJS = document.querySelector('#index-header .ticket-button div');
                             var headerSelectJS = document.querySelector('#index-header .employee-select');
-                            new log_overlay_1.LogOverlay.initiateEvents(closeButtonJQ, logButtonJQ, ticketSubjectJQ, ticketDescriptionJQ, departmentFormJQ, departmentSelectJQ, coworkerFormJQ, coworkerSelectJQ, emailTextJQ, numberTextJQ, overlayCanvasJQ, overlayBackgroundJQ, ticketButtonJQ, headerSelectJQ, closeButtonJS, logButtonJS, ticketSubjectJS, ticketDescriptionJS, departmentFormJS, departmentSelectJS, coworkerFormJS, coworkerSelectJS, emailTextJS, numberTextJS, overlayCanvasJS, overlayBackgroundJS, ticketButtonJS, headerSelectJS);
+                            new log_overlay_1.LogOverlay.initiateEvents(overlayHeaderJQ, closeButtonJQ, logButtonJQ, ticketSubjectJQ, ticketDescriptionJQ, departmentFormJQ, departmentSelectJQ, coworkerFormJQ, coworkerSelectJQ, emailTextJQ, numberTextJQ, overlayCanvasJQ, overlayBackgroundJQ, ticketButtonJQ, headerSelectJQ, overlayHeaderJS, closeButtonJS, logButtonJS, ticketSubjectJS, ticketDescriptionJS, departmentFormJS, departmentSelectJS, coworkerFormJS, coworkerSelectJS, emailTextJS, numberTextJS, overlayCanvasJS, overlayBackgroundJS, ticketButtonJS, headerSelectJS);
                         }
                         break;
                     case 'tickets.html':
