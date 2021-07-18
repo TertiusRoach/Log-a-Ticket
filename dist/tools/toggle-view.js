@@ -1,4 +1,4 @@
-define(["require", "exports", "tools/convert-string"], function (require, exports, convert_string_1) {
+define(["require", "exports", "tools/convert-string", "tools/get-elements"], function (require, exports, convert_string_1, get_elements_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.ToggleView = void 0;
@@ -8,7 +8,7 @@ define(["require", "exports", "tools/convert-string"], function (require, export
             var container = document.getElementById("" + containerId);
             switch (action) {
                 case 'show':
-                    switch (convert_string_1.ConvertString.fetch('latter', containerId)) {
+                    switch (convert_string_1.ConvertString.fetch('latter', '-', containerId)) {
                         case 'header':
                             var header = document.getElementById(containerId);
                             header.style.display = 'grid';
@@ -28,12 +28,12 @@ define(["require", "exports", "tools/convert-string"], function (require, export
                     }
                     break;
                 case 'hide':
-                    if (convert_string_1.ConvertString.fetch('latter', containerId) !== 'iframe') {
+                    if (convert_string_1.ConvertString.fetch('latter', '-', containerId) !== 'iframe') {
                         container.innerHTML = '';
                     }
                     container.style.display = 'none';
                     container.classList.remove("" + container.classList[0]);
-                    switch (convert_string_1.ConvertString.fetch('latter', containerId)) {
+                    switch (convert_string_1.ConvertString.fetch('latter', '-', containerId)) {
                         case 'header':
                             container.classList.add('default-header');
                             break;
@@ -62,6 +62,27 @@ define(["require", "exports", "tools/convert-string"], function (require, export
             }
         }
         ToggleView.form = form;
+        function tickets(action, tabContainer) {
+            var ticketsMainJQ = get_elements_1.GetContainer.ticketsBodyJQ.contents().children('#tickets-main')[0];
+            var activeTabJQ = get_elements_1.GetContainer.indexMainJQ.children('.active-tab')[0];
+            var hideTickets;
+            var showTickets;
+            switch (action) {
+                case 'show':
+                    hideTickets = "" + convert_string_1.ConvertString.fetch('latter', ' ', $(ticketsMainJQ).attr('class'));
+                    showTickets = convert_string_1.ConvertString.reorder(tabContainer.id);
+                    $(ticketsMainJQ).removeClass(hideTickets);
+                    $(ticketsMainJQ).addClass(showTickets);
+                    break;
+                case 'hide':
+                    hideTickets = convert_string_1.ConvertString.reorder(tabContainer.id);
+                    showTickets = convert_string_1.ConvertString.reorder(activeTabJQ.id);
+                    $(ticketsMainJQ).removeClass(hideTickets);
+                    $(ticketsMainJQ).addClass(showTickets);
+                    break;
+            }
+        }
+        ToggleView.tickets = tickets;
         function indexMain(action) {
             switch (action) {
                 case 'show':

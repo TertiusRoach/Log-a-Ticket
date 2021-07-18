@@ -10,7 +10,7 @@ define(["require", "exports", "tools/get-elements", "tools/convert-string"], fun
             $(container).addClass("" + selectClass);
             switch (checkNetwork()) {
                 case 'index.html':
-                    if (convert_string_1.ConvertString.fetch('former', selectClass) === 'default') {
+                    if (convert_string_1.ConvertString.fetch('former', '-', selectClass) === 'default') {
                         $.get(selectId + ".html", function (data) {
                             $(container).html(data);
                             new get_elements_1.GetElements.initiateCode('index.html', selectClass);
@@ -24,7 +24,7 @@ define(["require", "exports", "tools/get-elements", "tools/convert-string"], fun
                     }
                     break;
                 case 'tickets.html':
-                    if (convert_string_1.ConvertString.fetch('former', selectClass) === 'default') {
+                    if (convert_string_1.ConvertString.fetch('former', '-', selectClass) === 'default') {
                         $.get(selectId + ".html", function (data) {
                             $(container).html(data);
                             new get_elements_1.GetElements.initiateCode('tickets.html', selectClass);

@@ -1,0 +1,1 @@
+{"version":3,"sources":["tools/events/coworker-main.ts"],"names":[],"mappings":";;;;IACA,IAAiB,YAAY,CAK5B;IALD,WAAiB,YAAY;QAC3B,SAAgB,cAAc;YAE5B,OAAO,CAAC,GAAG,CAAC,oBAAoB,CAAC,CAAC;QACpC,CAAC;QAHe,2BAAc,iBAG7B,CAAA;IACH,CAAC,EALgB,YAAY,GAAZ,oBAAY,KAAZ,oBAAY,QAK5B","file":"coworker-main.js","sourceRoot":"../../../src"}

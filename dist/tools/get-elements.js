@@ -1,4 +1,4 @@
-define(["require", "exports", "tools/events/index-header", "tools/events/login-overlay", "tools/events/log-overlay", "tools/events/tickets-header", "tools/events/tickets-main"], function (require, exports, index_header_1, login_overlay_1, log_overlay_1, tickets_header_1, tickets_main_1) {
+define(["require", "exports", "tools/events/index-header", "tools/events/logged-main", "tools/events/manage-main", "tools/events/login-overlay", "tools/events/log-overlay", "tools/events/tickets-header", "tools/events/tickets-main"], function (require, exports, index_header_1, logged_main_1, manage_main_1, login_overlay_1, log_overlay_1, tickets_header_1, tickets_main_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.GetContainer = exports.GetElements = void 0;
@@ -9,6 +9,10 @@ define(["require", "exports", "tools/events/index-header", "tools/events/login-o
                 switch (activeHTML) {
                     case 'index.html':
                         var indexHeader = 'default-header';
+                        var loggedMain = 'logged-main';
+                        var manageMain = 'manage-main';
+                        var employeeMain = 'employee-main';
+                        var coworkerMain = 'coworker-main';
                         var loginOverlay = 'login-overlay';
                         var logOverlay = 'log-overlay';
                         if (indexHeader === selectClass) {
@@ -32,7 +36,67 @@ define(["require", "exports", "tools/events/index-header", "tools/events/login-o
                         }
                         if ('default-iframe' === selectClass) {
                         }
-                        if ('default-main' === selectClass) {
+                        if (loggedMain === selectClass) {
+                            var pendingTabJQ = $('.logged-main #pending-tab');
+                            var pendingTextJQ = $('.logged-main #pending-tab h3');
+                            var assignedTabJQ = $('.logged-main #assigned-tab');
+                            var assignedTextJQ = $('.logged-main #assigned-tab h3');
+                            var resolvedTabJQ = $('.logged-main #resolved-tab');
+                            var resolvedTextJQ = $('.logged-main #resolved-tab h3');
+                            var deletedTabJQ = $('.logged-main #deleted-tab');
+                            var deletedTextJQ = $('.logged-main #deleted-tab h3');
+                            var everythingTabJQ = $('.logged-main #everything-tab');
+                            var everythingTextJQ = $('.logged-main #everything-tab h3');
+                            var activeTabJQ = $('.logged-main .active-tab');
+                            var defaultTabsJQ = $('.logged-main .default-tab');
+                            var allTabsJQ = $('.logged-main [id*="-tab"');
+                            var notificationContainerJQ = $('.logged-main .notification');
+                            var notificationTextJQ = $('.logged-main .notification .badge');
+                            var pendingTabJS = document.querySelector('.logged-main #pending-tab');
+                            var pendingTextJS = document.querySelector('.logged-main #pending-tab h3');
+                            var assignedTabJS = document.querySelector('.logged-main #assigned-tab');
+                            var assignedTextJS = document.querySelector('.logged-main #assigned-tab h3');
+                            var resolvedTabJS = document.querySelector('.logged-main #resolved-tab');
+                            var resolvedTextJS = document.querySelector('.logged-main #resolved-tab h3');
+                            var deletedTabJS = document.querySelector('.logged-main #deleted-tab');
+                            var deletedTextJS = document.querySelector('.logged-main #deleted-tab h3');
+                            var everythingTabJS = document.querySelector('.logged-main #everything-tab');
+                            var everythingTextJS = document.querySelector('.logged-main #everything-tab h3');
+                            var activeTabJS = document.querySelector('.logged-main .active-tab');
+                            var defaultTabsJS = document.querySelectorAll('.logged-main .default-tab');
+                            var allTabsJS = document.querySelectorAll('.logged-main [id*="-tab"');
+                            var notificationContainerJS = document.querySelector('.logged-main .notification');
+                            var notificationTextJS = document.querySelector('.logged-main .notification .badge');
+                            new logged_main_1.LoggedMain.initiateEvents(pendingTabJQ, pendingTextJQ, assignedTabJQ, assignedTextJQ, resolvedTabJQ, resolvedTextJQ, deletedTabJQ, deletedTextJQ, everythingTabJQ, everythingTextJQ, activeTabJQ, defaultTabsJQ, allTabsJQ, notificationContainerJQ, notificationTextJQ, pendingTabJS, pendingTextJS, assignedTabJS, assignedTextJS, resolvedTabJS, resolvedTextJS, deletedTabJS, deletedTextJS, everythingTabJS, everythingTextJS, activeTabJS, defaultTabsJS, allTabsJS, notificationContainerJS, notificationTextJS);
+                        }
+                        if (manageMain === selectClass) {
+                            var pendingTabJQ = $('.manage-main #pending-tab');
+                            var pendingTextJQ = $('.manage-main #pending-tab h3');
+                            var deletedTabJQ = $('.manage-main #deleted-tab');
+                            var deletedTextJQ = $('.manage-main #deleted-tab h3');
+                            var everythingTabJQ = $('.manage-main #everything-tab');
+                            var everythingTextJQ = $('.manage-main #everything-tab h3');
+                            var activeTabJQ = $('.manage-main .active-tab');
+                            var defaultTabsJQ = $('.manage-main .default-tab');
+                            var allTabsJQ = $('.manage-main [id*="-tab"');
+                            var notificationContainerJQ = $('.manage-main .notification');
+                            var notificationTextJQ = $('.manage-main .notification .badge');
+                            var pendingTabJS = document.querySelector('.manage-main #pending-tab');
+                            var pendingTextJS = document.querySelector('.manage-main #pending-tab h3');
+                            var deletedTabJS = document.querySelector('.manage-main #deleted-tab');
+                            var deletedTextJS = document.querySelector('.manage-main #deleted-tab h3');
+                            var everythingTabJS = document.querySelector('.manage-main #everything-tab');
+                            var everythingTextJS = document.querySelector('.manage-main #everything-tab h3');
+                            var activeTabJS = document.querySelector('.manage-main .active-tab');
+                            var defaultTabsJS = document.querySelectorAll('.manage-main .default-tab');
+                            var allTabsJS = document.querySelectorAll('.manage-main [id*="-tab"');
+                            var notificationContainerJS = document.querySelector('.manage-main .notification');
+                            var notificationTextJS = document.querySelector('.manage-main .notification .badge');
+                            new manage_main_1.ManageMain.initiateEvents(pendingTabJQ, pendingTextJQ, deletedTabJQ, deletedTextJQ, everythingTabJQ, everythingTextJQ, activeTabJQ, defaultTabsJQ, allTabsJQ, notificationContainerJQ, notificationTextJQ, pendingTabJS, pendingTextJS, deletedTabJS, deletedTextJS, everythingTabJS, everythingTextJS, activeTabJS, defaultTabsJS, allTabsJS, notificationContainerJS, notificationTextJS);
+                        }
+                        if (employeeMain === selectClass) {
+                        }
+                        if (coworkerMain === selectClass) {
                         }
                         if (loginOverlay === selectClass) {
                             var loginLogoJQ = $('.login-overlay .login-logo');
@@ -181,20 +245,15 @@ define(["require", "exports", "tools/events/index-header", "tools/events/login-o
     (function (GetContainer) {
         GetContainer.indexBodyJQ = $('#index-body');
         GetContainer.indexHeaderJQ = $('#index-header');
-        GetContainer.indexIframeJQ = $('#index-iframe');
+        GetContainer.indexIframeJQ = $('#index-iframe iframe');
         GetContainer.indexMainJQ = $('#index-main');
         GetContainer.indexOverlayJQ = $('#index-overlay');
         GetContainer.indexBodyJS = document.querySelector('#index-body');
         GetContainer.indexHeaderJS = document.querySelector('#index-header');
-        GetContainer.indexIframeJS = document.querySelector('#index-iframe iframe');
+        GetContainer.indexIframeJS = document.getElementById('tickets-iframe');
         GetContainer.indexMainJS = document.querySelector('#index-main');
         GetContainer.indexOverlayJS = document.querySelector('#index-overlay');
-        GetContainer.ticketsBodyJQ = $('#tickets-body');
-        GetContainer.ticketsHeaderJQ = $('#tickets-header');
-        GetContainer.ticketsMainJQ = $('#tickets-main');
-        GetContainer.ticketsBodyJS = document.querySelector('#tickets-body');
-        GetContainer.ticketsHeaderJS = document.querySelector('#tickets-header');
-        GetContainer.ticketsMainJS = document.querySelector('#tickets-main');
+        GetContainer.ticketsBodyJQ = GetContainer.indexIframeJQ.contents().children();
     })(GetContainer = exports.GetContainer || (exports.GetContainer = {}));
 });
 
