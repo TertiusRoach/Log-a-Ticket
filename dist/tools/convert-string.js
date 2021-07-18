@@ -20,8 +20,8 @@ define(["require", "exports"], function (require, exports) {
             }
         }
         ConvertString.value = value;
-        function fetch(action, pageContainer) {
-            var separate = pageContainer.split('-');
+        function fetch(action, splitString, pageContainer) {
+            var separate = pageContainer.split(splitString);
             var fetched;
             switch (action) {
                 case 'former':
@@ -34,6 +34,10 @@ define(["require", "exports"], function (require, exports) {
             return fetched;
         }
         ConvertString.fetch = fetch;
+        function reorder(pageContainer) {
+            return this.fetch('latter', '-', pageContainer) + "-" + this.fetch('former', '-', pageContainer);
+        }
+        ConvertString.reorder = reorder;
     })(ConvertString = exports.ConvertString || (exports.ConvertString = {}));
 });
 

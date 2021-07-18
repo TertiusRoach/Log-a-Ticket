@@ -20,7 +20,6 @@ define(["require", "exports", "tools/replace-dropdown", "tools/style-element", "
                 sync_user_1.SyncUser.toHeader(employeeSelectJS, headerSelectJS);
                 replace_text_1.ReplaceText.loginOverlay(employeeSelectJS, informationTextJS);
                 sync_user_1.SyncUser.toMain(headerSelectJS, loggedButtonJS, manageButtonJS);
-                toggle_view_1.ToggleView.indexMain('show');
             });
             loginButtonJQ.on('click', function () {
                 if (employeeSelectJS.value === 'pick-employee') {
@@ -31,6 +30,7 @@ define(["require", "exports", "tools/replace-dropdown", "tools/style-element", "
                     toggle_view_1.ToggleView.page('show', 'index-header');
                     toggle_view_1.ToggleView.page('show', 'index-iframe');
                     toggle_view_1.ToggleView.page('show', 'index-main');
+                    toggle_view_1.ToggleView.indexMain('show');
                 }
             });
             overlayCanvasJQ.on('click', function () {
