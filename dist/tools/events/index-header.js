@@ -1,4 +1,4 @@
-define(["require", "exports", "tools/replace-dropdown", "tools/style-element", "tools/toggle-view", "tools/sync-user", "tools/get-page"], function (require, exports, replace_dropdown_1, style_element_1, toggle_view_1, sync_user_1, get_page_1) {
+define(["require", "exports", "tools/replace-dropdown", "tools/replace-tickets", "tools/style-element", "tools/toggle-view", "tools/sync-user", "tools/get-page"], function (require, exports, replace_dropdown_1, replace_tickets_1, style_element_1, toggle_view_1, sync_user_1, get_page_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.IndexHeader = void 0;
@@ -6,6 +6,7 @@ define(["require", "exports", "tools/replace-dropdown", "tools/style-element", "
     (function (IndexHeader) {
         function initiateEvents(ticketButtonJQ, loggedButtonJQ, manageButtonJQ, headerFormJQ, headerSelectJQ, loginFormJQ, loginSelectJQ, loginButtonJQ, ticketButtonJS, loggedButtonJS, manageButtonJS, headerFormJS, headerSelectJS, loginFormJS, loginSelectJS, loginButtonJS) {
             headerSelectJQ.on('change', function () {
+                new replace_tickets_1.ReplaceTickets.assemble('change', headerSelectJS);
                 toggle_view_1.ToggleView.indexMain('hide');
                 sync_user_1.SyncUser.toMain(headerSelectJS, loggedButtonJS, manageButtonJS);
                 toggle_view_1.ToggleView.indexMain('show');
@@ -27,6 +28,8 @@ define(["require", "exports", "tools/replace-dropdown", "tools/style-element", "
             });
             loggedButtonJQ.on('click', function () {
                 if (loggedButtonJS.classList[0] === 'default-button') {
+                    console.log('Sync Tickets to selected tab');
+                    new replace_tickets_1.ReplaceTickets.assemble('logged', headerSelectJS);
                     toggle_view_1.ToggleView.indexMain('hide');
                     style_element_1.StyleElement.toggleButton(loggedButtonJS, manageButtonJS);
                     get_page_1.GetPage.forHTML('index-main', 'logged-main');
@@ -35,6 +38,8 @@ define(["require", "exports", "tools/replace-dropdown", "tools/style-element", "
             });
             manageButtonJQ.on('click', function () {
                 if (manageButtonJS.classList[0] === 'default-button') {
+                    console.log('Sync Tickets to selected tab');
+                    new replace_tickets_1.ReplaceTickets.assemble('manage', headerSelectJS);
                     toggle_view_1.ToggleView.indexMain('hide');
                     style_element_1.StyleElement.toggleButton(manageButtonJS, loggedButtonJS);
                     get_page_1.GetPage.forHTML('index-main', 'manage-main');

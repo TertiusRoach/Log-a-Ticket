@@ -1,4 +1,4 @@
-define(["require", "exports", "tools/replace-dropdown", "tools/style-element", "tools/replace-text", "tools/replace-tickets", "tools/toggle-view", "tools/sync-user"], function (require, exports, replace_dropdown_1, style_element_1, replace_text_1, replace_tickets_1, toggle_view_1, sync_user_1) {
+define(["require", "exports", "tools/replace-dropdown", "tools/replace-tickets", "tools/style-element", "tools/replace-text", "tools/toggle-view", "tools/sync-user"], function (require, exports, replace_dropdown_1, replace_tickets_1, style_element_1, replace_text_1, toggle_view_1, sync_user_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.LoginOverlay = void 0;
@@ -14,8 +14,7 @@ define(["require", "exports", "tools/replace-dropdown", "tools/style-element", "
                 }
             })
                 .on('change', function () {
-                toggle_view_1.ToggleView.indexMain('hide');
-                new replace_tickets_1.GetTickets.initiateCode();
+                new replace_tickets_1.ReplaceTickets.assemble('change', employeeSelectJS);
                 replace_dropdown_1.ReplaceDropdown.assemble('employees', headerSelectJS);
                 sync_user_1.SyncUser.toHeader(employeeSelectJS, headerSelectJS);
                 replace_text_1.ReplaceText.loginOverlay(employeeSelectJS, informationTextJS);

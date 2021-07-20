@@ -250,7 +250,7 @@ define(["require", "exports", "tools/events/index-header", "tools/events/logged-
         GetContainer.indexOverlayJQ = $('#index-overlay');
         GetContainer.indexBodyJS = document.querySelector('#index-body');
         GetContainer.indexHeaderJS = document.querySelector('#index-header');
-        GetContainer.indexIframeJS = document.getElementById('tickets-iframe');
+        GetContainer.indexIframeJS = document.querySelector('#index-iframe iframe');
         GetContainer.indexMainJS = document.querySelector('#index-main');
         GetContainer.indexOverlayJS = document.querySelector('#index-overlay');
         GetContainer.ticketsBodyJQ = GetContainer.indexIframeJQ.contents().children();

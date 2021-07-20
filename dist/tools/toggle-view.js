@@ -70,13 +70,13 @@ define(["require", "exports", "tools/convert-string", "tools/get-elements"], fun
             switch (action) {
                 case 'show':
                     hideTickets = "" + convert_string_1.ConvertString.fetch('latter', ' ', $(ticketsMainJQ).attr('class'));
-                    showTickets = convert_string_1.ConvertString.reorder(tabContainer.id);
+                    showTickets = convert_string_1.ConvertString.swap(tabContainer.id);
                     $(ticketsMainJQ).removeClass(hideTickets);
                     $(ticketsMainJQ).addClass(showTickets);
                     break;
                 case 'hide':
-                    hideTickets = convert_string_1.ConvertString.reorder(tabContainer.id);
-                    showTickets = convert_string_1.ConvertString.reorder(activeTabJQ.id);
+                    hideTickets = convert_string_1.ConvertString.swap(tabContainer.id);
+                    showTickets = convert_string_1.ConvertString.swap(activeTabJQ.id);
                     $(ticketsMainJQ).removeClass(hideTickets);
                     $(ticketsMainJQ).addClass(showTickets);
                     break;
