@@ -34,10 +34,10 @@ define(["require", "exports"], function (require, exports) {
             return fetched;
         }
         ConvertString.fetch = fetch;
-        function reorder(pageContainer) {
+        function swap(pageContainer) {
             return this.fetch('latter', '-', pageContainer) + "-" + this.fetch('former', '-', pageContainer);
         }
-        ConvertString.reorder = reorder;
+        ConvertString.swap = swap;
     })(ConvertString = exports.ConvertString || (exports.ConvertString = {}));
 });
 
